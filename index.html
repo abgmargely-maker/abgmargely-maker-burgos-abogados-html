@@ -33,19 +33,36 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-background:rgba(255,255,255,0.8);
+padding:15px 30px;
+background:rgba(255,255,255,0.9);
 backdrop-filter:blur(10px);
 z-index:100;
 }
 
-header img{height:75px;}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:65px;
+padding:6px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo span{
+font-family:'Playfair Display';
+font-size:18px;
+}
 
 .btn{
 background:var(--coral);
 color:#fff;
-padding:12px 22px;
-border-radius:30px;
+padding:10px 18px;
+border-radius:20px;
 text-decoration:none;
 }
 
@@ -61,6 +78,7 @@ background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover;
 color:#fff;
+padding:20px;
 }
 
 .hero h1{
@@ -83,6 +101,7 @@ text-decoration:none;
 animation:fadeUp 2s forwards;
 }
 
+/* ANIMACIÓN */
 @keyframes fadeUp{
 from{opacity:0;transform:translateY(40px)}
 to{opacity:1;transform:translateY(0)}
@@ -96,14 +115,17 @@ margin:auto;
 }
 
 .line{
-width:60px;height:3px;background:var(--coral);margin:20px 0;
+width:60px;
+height:3px;
+background:var(--coral);
+margin:20px 0;
 }
 
 /* BLOG */
 .blog article{
-margin-bottom:30px;
+margin-bottom:25px;
 border-bottom:1px solid #ddd;
-padding-bottom:15px;
+padding-bottom:10px;
 }
 
 /* MAPA */
@@ -165,16 +187,23 @@ font-size:12px;
 
 <body>
 
+<!-- HEADER -->
 <header>
-<img src="logo.png">
+<div class="logo">
+<img src="logo.png" alt="Burgos Abogados">
+<span>Burgos Abogados</span>
+</div>
+
 <a class="btn" href="https://wa.me/529996082755?text=Hola,%20quiero%20asesoría%20legal">
 Consulta inmediata
 </a>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <h1>Defensa legal estratégica en Mérida</h1>
 <p>Crecemos contigo, con estrategia y respaldo legal.</p>
+
 <a class="cta" href="https://wa.me/529996082755?text=Hola,%20necesito%20asesoría%20legal">
 Iniciar consulta privada
 </a>
@@ -206,6 +235,13 @@ Continuar
 </button>
 </div>
 
+<!-- SERVICIOS -->
+<section class="section">
+<h2>Áreas de práctica</h2>
+<div class="line"></div>
+<p>Derecho de familia, civil y mercantil, y servicios notariales en Mérida, Yucatán.</p>
+</section>
+
 <!-- BLOG -->
 <section class="section blog">
 <h2>Artículos legales</h2>
@@ -217,29 +253,32 @@ Continuar
 <article><h3>¿Qué hacer si te demandan?</h3></article>
 <article><h3>Errores en contratos</h3></article>
 
+<p><strong>Contáctanos por WhatsApp para asesoría inmediata.</strong></p>
 </section>
 
 <!-- UBICACIÓN -->
 <section class="section">
 <h2>Ubicación</h2>
 <div class="line"></div>
-<p>Calle 33 #479, Mérida, Yucatán</p>
-<p>abg.margely@burgossc.com</p>
+<p>Calle 33 #479, Polígono 108, Mérida, Yucatán</p>
+<p>📧 abg.margely@burgossc.com</p>
 
 <iframe src="https://maps.google.com/maps?q=calle%2033%20479%20Merida&t=&z=15&output=embed"></iframe>
 </section>
 
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/529996082755">
+<a class="whatsapp" href="https://wa.me/529996082755?text=Hola,%20necesito%20asesoría%20legal">
 <svg viewBox="0 0 32 32">
 <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.5 2.1 7.9L.6 31.4l7.7-2c2.3 1.2 4.9 1.8 7.6 1.8 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6z"/>
 </svg>
 </a>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Burgos Abogados. Todos los derechos reservados.
 </footer>
 
+<!-- SCRIPT -->
 <script>
 function enviar(){
 let tipo = document.getElementById("tipo").value;
