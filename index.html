@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Abogados en Mérida Yucatán | Burgos Abogados</title>
-
 <meta name="description" content="Despacho jurídico en Mérida. Especialistas en derecho de familia, civil y servicios notariales.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -84,12 +83,10 @@ padding:20px;
 .hero h1{
 font-family:'Playfair Display';
 font-size:3.2em;
-animation:fadeUp 1s forwards;
 }
 
 .hero p{
 margin:15px 0;
-animation:fadeUp 1.5s forwards;
 }
 
 .cta{
@@ -98,13 +95,6 @@ padding:14px 30px;
 border-radius:30px;
 color:#fff;
 text-decoration:none;
-animation:fadeUp 2s forwards;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:translateY(0)}
 }
 
 /* SECCIONES */
@@ -121,11 +111,30 @@ background:var(--coral);
 margin:20px 0;
 }
 
-/* BLOG */
-.blog article{
-margin-bottom:25px;
-border-bottom:1px solid #ddd;
-padding-bottom:10px;
+/* FAQ */
+.faq-item{
+margin-bottom:15px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question{
+width:100%;
+background:white;
+border:none;
+padding:15px;
+text-align:left;
+font-weight:500;
+cursor:pointer;
+font-size:15px;
+}
+
+.faq-answer{
+display:none;
+padding:15px;
+background:#fafafa;
+font-size:14px;
 }
 
 /* MAPA */
@@ -187,7 +196,6 @@ font-size:12px;
 
 <body>
 
-<!-- HEADER -->
 <header>
 <div class="logo">
 <img src="logo.png" alt="Burgos Abogados">
@@ -199,11 +207,9 @@ Consulta inmediata
 </a>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Defensa legal estratégica en Mérida</h1>
 <p>Crecemos contigo, con estrategia y respaldo legal.</p>
-
 <a class="cta" href="https://wa.me/529996082755?text=Hola,%20necesito%20asesoría%20legal">
 Iniciar consulta privada
 </a>
@@ -242,16 +248,39 @@ Continuar
 <p>Derecho de familia, civil y mercantil, y servicios notariales en Mérida, Yucatán.</p>
 </section>
 
-<!-- BLOG -->
-<section class="section blog">
+<!-- BLOG FAQ -->
+<section class="section">
 <h2>Artículos legales</h2>
 <div class="line"></div>
 
-<article><h3>¿Cuánto cuesta un divorcio en Mérida?</h3></article>
-<article><h3>Tipos de divorcio en México</h3></article>
-<article><h3>Pensión alimenticia</h3></article>
-<article><h3>¿Qué hacer si te demandan?</h3></article>
-<article><h3>Errores en contratos</h3></article>
+<div class="faq">
+
+<div class="faq-item">
+<button class="faq-question">¿Cuánto cuesta un divorcio en Mérida?</button>
+<div class="faq-answer"><p>El costo depende del tipo de proceso, bienes y acuerdos.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Tipos de divorcio en México</button>
+<div class="faq-answer"><p>Existen divorcio incausado y voluntario.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Pensión alimenticia</button>
+<div class="faq-answer"><p>Se calcula según ingresos y necesidades.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿Qué hacer si te demandan?</button>
+<div class="faq-answer"><p>Actúa rápido y busca asesoría legal.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Errores en contratos</button>
+<div class="faq-answer"><p>Evita cláusulas ambiguas.</p></div>
+</div>
+
+</div>
 
 <p><strong>Contáctanos por WhatsApp para asesoría inmediata.</strong></p>
 </section>
@@ -267,24 +296,30 @@ Continuar
 </section>
 
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/529996082755?text=Hola,%20necesito%20asesoría%20legal">
+<a class="whatsapp" href="https://wa.me/529996082755">
 <svg viewBox="0 0 32 32">
 <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.5 2.1 7.9L.6 31.4l7.7-2c2.3 1.2 4.9 1.8 7.6 1.8 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6z"/>
 </svg>
 </a>
 
-<!-- FOOTER -->
 <footer>
 © 2026 Burgos Abogados. Todos los derechos reservados.
 </footer>
 
-<!-- SCRIPT -->
 <script>
 function enviar(){
 let tipo = document.getElementById("tipo").value;
 let mensaje = "Hola, necesito asesoría legal sobre: " + tipo;
 window.open("https://wa.me/529996082755?text=" + encodeURIComponent(mensaje));
 }
+
+const questions = document.querySelectorAll(".faq-question");
+questions.forEach(q=>{
+q.addEventListener("click",()=>{
+let answer=q.nextElementSibling;
+answer.style.display=answer.style.display==="block"?"none":"block";
+});
+});
 </script>
 
 </body>
