@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abogados en Mérida Yucatán | Burgos Abogados</title>
+
+<meta name="description" content="Despacho jurídico en Mérida. Especialistas en derecho de familia, civil y servicios notariales.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--verde:#6f8463;
+--coral:#d96c52;
+--beige:#f5efe6;
+--negro:#121212;
+}
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:var(--beige);
+color:var(--negro);
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+header img{height:75px;}
+
+.btn{
+background:var(--coral);
+color:#fff;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover;
+color:#fff;
+}
+
+.hero h1{
+font-family:'Playfair Display';
+font-size:3.2em;
+animation:fadeUp 1s forwards;
+}
+
+.hero p{
+margin:15px 0;
+animation:fadeUp 1.5s forwards;
+}
+
+.cta{
+border:1px solid var(--coral);
+padding:14px 30px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+animation:fadeUp 2s forwards;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* SECCIONES */
+.section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.line{
+width:60px;height:3px;background:var(--coral);margin:20px 0;
+}
+
+/* BLOG */
+.blog article{
+margin-bottom:30px;
+border-bottom:1px solid #ddd;
+padding-bottom:15px;
+}
+
+/* MAPA */
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
+70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+.whatsapp svg{
+width:30px;
+fill:#fff;
+}
+
+/* CHATBOT */
+#chatbot{
+position:fixed;
+bottom:100px;
+right:20px;
+background:white;
+padding:20px;
+border-radius:15px;
+width:260px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+font-size:14px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png">
+<a class="btn" href="https://wa.me/529996082755?text=Hola,%20quiero%20asesoría%20legal">
+Consulta inmediata
+</a>
+</header>
+
+<section class="hero">
+<h1>Defensa legal estratégica en Mérida</h1>
+<p>Crecemos contigo, con estrategia y respaldo legal.</p>
+<a class="cta" href="https://wa.me/529996082755?text=Hola,%20necesito%20asesoría%20legal">
+Iniciar consulta privada
+</a>
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+<strong>Asesoría legal</strong><br><br>
+¿En qué podemos ayudarte?
+
+<select id="tipo" style="width:100%;padding:8px;margin-top:10px;">
+<option>Divorcio</option>
+<option>Demanda</option>
+<option>Contrato</option>
+<option>Otro</option>
+</select>
+
+<br><br>
+
+<button onclick="enviar()" style="
+width:100%;
+background:#d96c52;
+color:white;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;">
+Continuar
+</button>
+</div>
+
+<!-- BLOG -->
+<section class="section blog">
+<h2>Artículos legales</h2>
+<div class="line"></div>
+
+<article><h3>¿Cuánto cuesta un divorcio en Mérida?</h3></article>
+<article><h3>Tipos de divorcio en México</h3></article>
+<article><h3>Pensión alimenticia</h3></article>
+<article><h3>¿Qué hacer si te demandan?</h3></article>
+<article><h3>Errores en contratos</h3></article>
+
+</section>
+
+<!-- UBICACIÓN -->
+<section class="section">
+<h2>Ubicación</h2>
+<div class="line"></div>
+<p>Calle 33 #479, Mérida, Yucatán</p>
+<p>abg.margely@burgossc.com</p>
+
+<iframe src="https://maps.google.com/maps?q=calle%2033%20479%20Merida&t=&z=15&output=embed"></iframe>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/529996082755">
+<svg viewBox="0 0 32 32">
+<path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.5 2.1 7.9L.6 31.4l7.7-2c2.3 1.2 4.9 1.8 7.6 1.8 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6z"/>
+</svg>
+</a>
+
+<footer>
+© 2026 Burgos Abogados. Todos los derechos reservados.
+</footer>
+
+<script>
+function enviar(){
+let tipo = document.getElementById("tipo").value;
+let mensaje = "Hola, necesito asesoría legal sobre: " + tipo;
+window.open("https://wa.me/529996082755?text=" + encodeURIComponent(mensaje));
+}
+</script>
+
+</body>
+</html>
