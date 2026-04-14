@@ -3,116 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Burgos Abogados</title>
+  <title>Burgos Abogados | Estrategia y Respaldo Legal en Mérida</title>
+  <meta name="description" content="Burgos Abogados en Mérida, Yucatán. Asesoría en derecho corporativo, civil, mercantil, laboral y familiar. Crecemos contigo, con estrategia y respaldo legal." />
+  <meta name="keywords" content="abogados en Mérida, despacho jurídico Yucatán, derecho familiar, derecho corporativo, pensión alimenticia, divorcio, contratos, Burgos Abogados" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Burgos Abogados" />
+  <meta property="og:description" content="Crecemos contigo, con estrategia y respaldo legal." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #0f0f10;
-      color: #f5f1e8;
-      line-height: 1.6;
-    }
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(rgba(10,10,10,.75), rgba(10,10,10,.88)),
-                  url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover;
-      padding: 30px 8%;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 80px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .logo img { width: 70px; height: 70px; object-fit: contain; }
-    .menu { display: flex; gap: 34px; }
-    .menu a {
-      color: #f5f1e8;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
-    h1 {
-      font-size: 4rem;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      max-width: 700px;
-    }
-    .accent { color: #c7b58a; }
-    .cta {
-      display: inline-block;
-      background: #7f8b68;
-      color: white;
-      padding: 16px 34px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-    .section {
-      padding: 90px 8%;
-      background: #121214;
-    }
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-    .about-card {
-      background: #1a1a1d;
-      padding: 30px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    h2 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
-    .subtitle {
-      color: #c7b58a;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      font-size: .9rem;
-      text-transform: uppercase;
-    }
-    .areas {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .area-card {
-      background: #f5efe4;
-      color: #2b241b;
-      padding: 30px 24px;
-      border-radius: 12px;
-      min-height: 220px;
-    }
-    .area-card h3 {
-      font-size: 1.7rem;
-      margin-bottom: 14px;
-    }
-    .center { text-align: center; }
-    .footer-cta {
-      padding: 80px 8%;
-      text-align: center;
-      background: linear-gradient(135deg, #171717, #0d0d0e);
-    }
-    @media (max-width: 900px) {
-      .hero-grid, .about, .areas { grid-template-columns: 1fr; }
-      h1 { font-size: 2.8rem; }
-      .menu { display: none; }
+    body { font-family: Georgia, 'Times New Roman', serif; background: #0f0f10; color: #f5f1e8; line-height: 1.6; }
+    .hero { min-height: 100vh; background: linear-gradient(rgba(10,10,10,.75), rgba(10,10,10,.88)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover; padding: 30px 8%; }
+    nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:80px; }
+    .logo img { width: 90px; height: 90px; object-fit: contain; }
+    .menu { display:flex; gap:34px; flex-wrap:wrap; }
+    .menu a, .whatsapp-float { text-decoration:none; }
+    .menu a { color:#f5f1e8; font-size:18px; }
+    .hero-grid, .about { display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
+    h1 { font-size: clamp(2.2rem, 6vw, 4rem); line-height:1.1; margin-bottom:24px; max-width:700px; }
+    .accent { color:#c7b58a; }
+    .cta { display:inline-block; background:#7f8b68; color:white; padding:16px 34px; border-radius:8px; text-decoration:none; margin-top:10px; }
+    .section { padding: 90px 8%; background:#121214; }
+    .about-card, .chatbot-box { background:#1a1a1d; padding:30px; border-radius:24px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+    h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom:20px; }
+    .subtitle { color:#c7b58a; letter-spacing:2px; margin-bottom:12px; font-size:.9rem; text-transform:uppercase; }
+    .areas { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:40px; }
+    .area-card { background:#f5efe4; color:#2b241b; padding:30px 24px; border-radius:12px; min-height:220px; }
+    .center { text-align:center; }
+    .footer-cta { padding:80px 8%; background:linear-gradient(135deg,#171717,#0d0d0e); }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
+    .whatsapp-float { position:fixed; right:20px; bottom:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; z-index:1000; }
+    .chatbot-questions button { display:block; width:100%; margin:10px 0; padding:12px; border:none; border-radius:10px; background:#2a2a2d; color:#fff; text-align:left; cursor:pointer; }
+    @media (max-width: 1024px) { .areas { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width: 768px) {
+      .hero-grid, .about, .areas, .contact-grid { grid-template-columns:1fr; }
+      nav { gap:20px; }
+      .menu { display:none; }
+      .hero { padding:20px 6%; }
+      .section, .footer-cta { padding:60px 6%; }
     }
   </style>
 </head>
@@ -177,9 +104,24 @@
   </section>
 
   <section class="footer-cta" id="contacto">
-    <h2>Agenda una consulta estratégica</h2>
-    <p style="max-width:700px;margin:20px auto;">Permítenos ayudarte a tomar decisiones legales inteligentes con respaldo profesional.</p>
-    <a class="cta" href="mailto:contacto@burgosabogados.com">Solicitar asesoría</a>
+    <h2>Contacto</h2>
+    <div class="contact-grid">
+      <div>
+        <p><strong>Dirección:</strong> Calle 33 número 479, Polígono 108, Mérida, Yucatán</p>
+        <p><strong>Email:</strong> <a href="mailto:Abg.margely@burgossc.com" style="color:#c7b58a;">Abg.margely@burgossc.com</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:9996082755" style="color:#c7b58a;">999 608 2755</a></p>
+        <a class="cta" href="https://wa.me/529996082755" target="_blank">Escríbenos por WhatsApp</a>
+      </div>
+      <div class="chatbot-box">
+        <h3>Preguntas rápidas</h3>
+        <div class="chatbot-questions">
+          <button onclick="alert('Sí, agenda tu consulta por WhatsApp y te orientamos.')">¿Puedo agendar una consulta?</button>
+          <button onclick="alert('Atendemos asuntos familiares, corporativos, civiles y laborales.')">¿Qué asuntos atienden?</button>
+          <button onclick="alert('Sí, ofrecemos atención presencial y virtual.')">¿Dan asesoría en línea?</button>
+        </div>
+      </div>
+    </div>
   </section>
+  <a class="whatsapp-float" href="https://wa.me/529996082755" target="_blank">✆</a>
 </body>
 </html>
