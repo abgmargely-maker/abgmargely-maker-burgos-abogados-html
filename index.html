@@ -1,172 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Burgos Abogados | Firma Legal en Mérida</title>
-<meta name="description" content="Firma legal en Mérida especializada en derecho de familia, civil, mercantil y servicios notariales.">
+<title>Abogados en Mérida Yucatán | Burgos Abogados</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Abogados en Mérida especialistas en divorcios, pensión alimenticia, derecho civil y mercantil. Consulta inmediata por WhatsApp.">
+
+<meta name="keywords" content="abogados en merida, divorcio merida, pension alimenticia merida, abogado civil merida, abogado mercantil merida">
+
+<meta name="robots" content="index, follow">
+
+<!-- SEO LOCAL -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"LegalService",
+"name":"Burgos Abogados",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Calle 33 #479, Polígono 108",
+"addressLocality":"Mérida",
+"addressRegion":"Yucatán",
+"addressCountry":"MX"
+},
+"telephone":"+529996082755",
+"email":"abg.margely@burgossc.com"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
---verde:#6f8463;
 --coral:#d96c52;
---beige:#f7f4ee;
 --negro:#111;
+--beige:#f7f4ee;
 }
-
-*{box-sizing:border-box;}
 
 body{
 margin:0;
 font-family:'Libre Franklin',sans-serif;
 background:var(--beige);
-color:var(--negro);
+color:#222;
 }
 
 /* HEADER */
 header{
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(10px);
+padding:15px;
+position:fixed;
+width:100%;
+background:white;
 z-index:100;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-height:55px;
-}
-
-.logo span{
-font-family:'Playfair Display';
-font-size:16px;
-}
+.logo img{height:60px;}
 
 .btn{
-background:var(--negro);
-color:#fff;
+background:var(--coral);
+color:white;
 padding:10px 18px;
 border-radius:25px;
 text-decoration:none;
-font-size:14px;
 }
 
 /* HERO */
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:100px 20px;
+color:white;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover;
-color:#fff;
 }
 
 .hero h1{
 font-family:'Playfair Display';
-font-size:2.5em;
-max-width:800px;
-}
-
-.hero p{
-margin-top:15px;
-font-size:1.1em;
-max-width:600px;
+font-size:2.8em;
+max-width:700px;
 }
 
 .cta{
-margin-top:25px;
+margin-top:20px;
 padding:14px 25px;
+border:1px solid white;
 border-radius:30px;
-border:1px solid #fff;
-color:#fff;
+color:white;
 text-decoration:none;
 }
 
 /* SECCIONES */
 .section{
-padding:70px 20px;
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
 }
 
-h2{
-font-family:'Playfair Display';
-font-size:2em;
-}
-
-/* AREAS */
-.areas{
+/* CARDS */
+.grid{
 display:grid;
-grid-template-columns:1fr;
 gap:20px;
-margin-top:30px;
 }
 
 .card{
-background:#fff;
+background:white;
 padding:25px;
 border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:.3s;
 text-align:center;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-}
-
-.icon{
-width:60px;
-height:60px;
-margin:auto;
-background:rgba(217,108,82,0.1);
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.icon svg{
-width:28px;
-fill:var(--coral);
+transform:translateY(-5px);
 }
 
 /* FAQ */
-.faq-item{
-margin-top:10px;
-}
-
-.faq-question{
+.faq button{
 width:100%;
 padding:15px;
 border:none;
-background:#fff;
-text-align:left;
+background:white;
 cursor:pointer;
+text-align:left;
+margin-top:10px;
 }
 
-.faq-answer{
+.faq div{
 display:none;
 padding:15px;
-background:#f0f0f0;
+background:#eee;
 }
 
 /* MAP */
@@ -177,41 +148,89 @@ border:none;
 border-radius:10px;
 }
 
-/* WHATS */
+/* WHATSAPP FLOAT */
 .whatsapp{
 position:fixed;
-bottom:15px;
-right:15px;
-width:55px;
-height:55px;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
+70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 
 /* CHATBOT */
 #chatbot{
 position:fixed;
-bottom:85px;
-right:5%;
-width:90%;
+bottom:100px;
+right:20px;
+width:280px;
 background:white;
-padding:15px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+overflow:hidden;
+animation:fadeIn .5s;
+}
+
+#chatbot-header{
+background:var(--coral);
+color:white;
+padding:10px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+#chatbot-header img{
+height:30px;
+border-radius:50%;
+}
+
+#chatbot-body{
+padding:15px;
+}
+
+select{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:var(--coral);
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* COPY */
+.copy{
+font-size:1.1em;
+line-height:1.6;
 }
 
 /* RESPONSIVE */
 @media(min-width:768px){
-.areas{grid-template-columns:1fr 1fr;}
-#chatbot{width:300px;right:20px;}
+.grid{grid-template-columns:1fr 1fr;}
 }
 
 @media(min-width:1024px){
-.areas{grid-template-columns:repeat(4,1fr);}
-.hero h1{font-size:3.2em;}
+.grid{grid-template-columns:repeat(4,1fr);}
+.hero h1{font-size:3.5em;}
 }
 </style>
 </head>
@@ -221,72 +240,70 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 <header>
 <div class="logo">
 <img src="logo.png">
-<span>Burgos Abogados</span>
 </div>
-<a class="btn" href="https://wa.me/529996082755">Consulta</a>
+<a class="btn" href="https://wa.me/529996082755">Consulta inmediata</a>
 </header>
 
 <section class="hero">
-<h1>Soluciones legales estratégicas en Mérida</h1>
-<p>Crecemos contigo, con estrategia y respaldo legal.</p>
-<a class="cta" href="https://wa.me/529996082755">Solicitar asesoría</a>
+<h1>Abogados en Mérida que resuelven tu problema legal</h1>
+<p class="copy">Divorcios, pensión alimenticia, contratos y asesoría legal estratégica. Atención inmediata por WhatsApp.</p>
+<a class="cta" href="https://wa.me/529996082755">Hablar con un abogado</a>
 </section>
 
-<!-- AREAS -->
+<!-- SERVICIOS -->
 <section class="section">
 <h2>Áreas de práctica</h2>
 
-<div class="areas">
+<div class="grid">
 
-<div class="card">
-<div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 7v7c0 5 3.8 9.7 8 11 4.2-1.3 8-6 8-11V7z"/></svg></div>
-<h3>Familia</h3>
-<p>Divorcios y pensión alimenticia</p>
-</div>
-
-<div class="card">
-<div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg></div>
-<h3>Civil</h3>
-<p>Contratos y obligaciones</p>
-</div>
-
-<div class="card">
-<div class="icon"><svg viewBox="0 0 24 24"><path d="M12 7V3L2 9l10 6"/></svg></div>
-<h3>Mercantil</h3>
-<p>Litigios comerciales</p>
-</div>
-
-<div class="card">
-<div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6v20h12V8z"/></svg></div>
-<h3>Notarial</h3>
-<p>Compraventas y donaciones</p>
-</div>
+<div class="card"><h3>Divorcios</h3></div>
+<div class="card"><h3>Pensión alimenticia</h3></div>
+<div class="card"><h3>Derecho civil</h3></div>
+<div class="card"><h3>Derecho mercantil</h3></div>
+<div class="card"><h3>Procedimientos familiares</h3></div>
+<div class="card"><h3>Compraventas</h3></div>
+<div class="card"><h3>Donaciones</h3></div>
+<div class="card"><h3>Servicios notariales</h3></div>
 
 </div>
 </section>
 
-<!-- FAQ -->
-<section class="section">
+<!-- FAQ SEO -->
+<section class="section faq">
 <h2>Preguntas frecuentes</h2>
 
-<div class="faq-item">
-<button class="faq-question">¿Cuánto cuesta un divorcio?</button>
-<div class="faq-answer"><p>Depende del caso y complejidad.</p></div>
-</div>
+<button>¿Cuánto cuesta un divorcio en Mérida?</button>
+<div>Depende del tipo de procedimiento y complejidad del caso.</div>
+
+<button>¿Cómo solicitar pensión alimenticia?</button>
+<div>Se inicia mediante demanda familiar con asesoría legal.</div>
+
+<button>¿Qué hacer si me demandan?</button>
+<div>Debe atenderse de inmediato con un abogado.</div>
 
 </section>
 
 <!-- UBICACIÓN -->
 <section class="section">
 <h2>Ubicación</h2>
-<p>Calle 33 #479, Mérida, Yucatán</p>
+<p>Calle 33 #479, Polígono 108, Mérida, Yucatán</p>
 <p>abg.margely@burgossc.com</p>
 
-<iframe src="https://maps.google.com/maps?q=merida&t=&z=15&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=merida&z=15&output=embed"></iframe>
 </section>
 
 <!-- CHATBOT -->
 <div id="chatbot">
+
+<div id="chatbot-header">
+<img src="logo.png">
+<span>Burgos Abogados</span>
+</div>
+
+<div id="chatbot-body">
+
+<p><strong>¿En qué necesitas ayuda?</strong></p>
+
 <select id="tipo">
 <option>Divorcios</option>
 <option>Pensiones alimenticias</option>
@@ -296,11 +313,13 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 <option>Compraventas</option>
 <option>Servicios notariales</option>
 </select>
-<br><br>
-<button onclick="enviar()">Continuar</button>
+
+<button onclick="enviar()">Continuar en WhatsApp</button>
+
+</div>
 </div>
 
-<!-- WHATS -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/529996082755"></a>
 
 <footer style="text-align:center;padding:20px;">
@@ -310,13 +329,14 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 <script>
 function enviar(){
 let tipo=document.getElementById("tipo").value;
-window.open("https://wa.me/529996082755?text="+encodeURIComponent("Asesoría en "+tipo));
+let mensaje="Hola, necesito asesoría legal en: "+tipo;
+window.open("https://wa.me/529996082755?text="+encodeURIComponent(mensaje));
 }
 
-document.querySelectorAll(".faq-question").forEach(q=>{
-q.addEventListener("click",()=>{
-let a=q.nextElementSibling;
-a.style.display=a.style.display==="block"?"none":"block";
+document.querySelectorAll(".faq button").forEach(b=>{
+b.addEventListener("click",()=>{
+let d=b.nextElementSibling;
+d.style.display=d.style.display==="block"?"none":"block";
 });
 });
 </script>
