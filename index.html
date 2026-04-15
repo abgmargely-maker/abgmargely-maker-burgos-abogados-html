@@ -13,7 +13,6 @@
 
 <meta name="robots" content="index, follow">
 
-<!-- SEO LOCAL -->
 <script type="application/ld+json">
 {
 "@context":"https://schema.org",
@@ -40,8 +39,6 @@
 --beige:#f7f4ee;
 }
 
-*{box-sizing:border-box;}
-
 body{
 margin:0;
 font-family:'Libre Franklin',sans-serif;
@@ -54,7 +51,7 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:15px;
 position:fixed;
 width:100%;
 background:white;
@@ -69,7 +66,6 @@ color:white;
 padding:10px 18px;
 border-radius:25px;
 text-decoration:none;
-font-size:14px;
 }
 
 /* HERO */
@@ -139,40 +135,29 @@ transition:.3s;
 transform:translateY(-6px);
 }
 
-.icon{
-width:60px;
-height:60px;
-margin:auto;
-border-radius:50%;
-background:rgba(217,108,82,0.1);
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.icon svg{
-width:28px;
-fill:var(--coral);
-}
-
 /* FAQ */
 .faq-item{
-margin-bottom:10px;
+margin-bottom:12px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .faq-question{
 width:100%;
 padding:15px;
-background:#fff;
 border:none;
-text-align:left;
+background:#fff;
 cursor:pointer;
+text-align:left;
+font-weight:500;
 }
 
 .faq-answer{
 display:none;
 padding:15px;
 background:#f4f4f4;
+line-height:1.6;
 }
 
 /* MAP */
@@ -183,7 +168,7 @@ border:none;
 border-radius:10px;
 }
 
-/* WHATS FLOAT */
+/* WHATS */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -195,13 +180,6 @@ border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
-70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 
 /* CHATBOT */
@@ -214,12 +192,6 @@ background:white;
 border-radius:15px;
 box-shadow:0 15px 40px rgba(0,0,0,0.2);
 overflow:hidden;
-animation:fadeIn .5s;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
 }
 
 .chat-header{
@@ -272,7 +244,6 @@ fill:white;
 /* RESPONSIVE */
 @media(min-width:768px){
 .areas{grid-template-columns:1fr 1fr;}
-#chatbot{width:320px;}
 }
 
 @media(min-width:1024px){
@@ -291,34 +262,25 @@ fill:white;
 <a class="btn" href="https://wa.me/529996082755">Consulta inmediata</a>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<h1>Abogados en Mérida que resuelven tu problema legal</h1>
-<p>Divorcios, pensión alimenticia, contratos y asesoría estratégica. Atención inmediata y confidencial.</p>
+<h1>Crecemos contigo, con estrategia y respaldo legal.</h1>
+<p>Abogados en Mérida que resuelven tu problema legal.</p>
 <a class="cta" href="https://wa.me/529996082755">Hablar con un abogado</a>
 </section>
 
 <!-- AREAS -->
 <section class="section">
 <h2>Áreas de práctica</h2>
-
 <div class="areas">
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 7v7c0 5 3.8 9.7 8 11"/></svg></div><h3>Divorcios</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg></div><h3>Pensión alimenticia</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 7V3L2 9l10 6"/></svg></div><h3>Derecho civil</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2H6v20h12V8z"/></svg></div><h3>Derecho mercantil</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 7v7"/></svg></div><h3>Procedimientos familiares</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h18"/></svg></div><h3>Compraventas</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 7V3"/></svg></div><h3>Donaciones</h3></div>
-
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2"/></svg></div><h3>Servicios notariales</h3></div>
-
+<div class="card"><h3>Divorcios</h3></div>
+<div class="card"><h3>Pensión alimenticia</h3></div>
+<div class="card"><h3>Derecho civil</h3></div>
+<div class="card"><h3>Derecho mercantil</h3></div>
+<div class="card"><h3>Procedimientos familiares</h3></div>
+<div class="card"><h3>Compraventas</h3></div>
+<div class="card"><h3>Donaciones</h3></div>
+<div class="card"><h3>Servicios notariales</h3></div>
 </div>
 </section>
 
@@ -327,13 +289,31 @@ fill:white;
 <h2>Preguntas frecuentes</h2>
 
 <div class="faq-item">
-<button class="faq-question">¿Qué servicios legales ofrecen?</button>
-<div class="faq-answer"><p>Ofrecemos asesoría en derecho civil, familiar, mercantil, administrativo y servicios notariales.</p></div>
+<button class="faq-question">¿Qué tipo de servicios legales ofrece Burgos Abogados?</button>
+<div class="faq-answer">
+<p>Brindamos asesoría y representación legal en derecho civil, familiar, mercantil, administrativo y servicios notariales, ofreciendo soluciones estratégicas adaptadas a cada caso.</p>
+</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">¿Cómo agendar cita?</button>
-<div class="faq-answer"><p>Por WhatsApp o correo electrónico.</p></div>
+<button class="faq-question">¿Cómo puedo programar una cita?</button>
+<div class="faq-answer">
+<p>Puedes agendar tu consulta fácilmente a través de correo electrónico o enviándonos un mensaje directo por WhatsApp para atención inmediata.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿Ofrecen planes de pago flexibles?</button>
+<div class="faq-answer">
+<p>Sí, contamos con esquemas de pago flexibles. Aceptamos tarjetas de débito y crédito (Visa, Mastercard y American Express).</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿En cuánto tiempo se resuelve mi caso?</button>
+<div class="faq-answer">
+<p>Depende de la complejidad del caso, pero trabajamos con estrategias eficientes para lograr resultados en el menor tiempo posible.</p>
+</div>
 </div>
 
 </section>
@@ -341,25 +321,27 @@ fill:white;
 <!-- UBICACION -->
 <section class="section">
 <h2>Ubicación</h2>
-<p>Calle 33 #479, Mérida</p>
+<p>Calle 33 #479, Polígono 108, Mérida, Yucatán</p>
+<p>abg.margely@burgossc.com</p>
 <iframe src="https://maps.google.com/maps?q=merida&z=15&output=embed"></iframe>
 </section>
 
 <!-- CHATBOT -->
 <div id="chatbot">
-
 <div class="chat-header">
 <img src="logo.png">
 <strong>Burgos Abogados</strong>
 </div>
 
 <div class="chat-body">
-
 <select id="tipo">
 <option>Divorcios</option>
-<option>Pensiones</option>
-<option>Civil</option>
-<option>Mercantil</option>
+<option>Pensiones alimenticias</option>
+<option>Procedimientos familiares</option>
+<option>Procedimientos civiles y mercantiles</option>
+<option>Donaciones</option>
+<option>Compraventas</option>
+<option>Servicios notariales</option>
 </select>
 
 <select id="urgencia">
@@ -369,10 +351,11 @@ fill:white;
 </select>
 
 <button onclick="enviar()" class="btn-whatsapp">
-<svg viewBox="0 0 32 32"><path d="M16 .6"/></svg>
+<svg viewBox="0 0 32 32">
+<path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.5 2.1 7.9L.6 31.4l7.7-2c2.3 1.2 4.9 1.8 7.6 1.8"/>
+</svg>
 <span>WhatsApp</span>
 </button>
-
 </div>
 </div>
 
@@ -386,7 +369,7 @@ fill:white;
 function enviar(){
 let tipo=document.getElementById("tipo").value;
 let urgencia=document.getElementById("urgencia").value;
-window.open("https://wa.me/529996082755?text="+encodeURIComponent("Asunto: "+tipo+" Urgencia: "+urgencia));
+window.open("https://wa.me/529996082755?text="+encodeURIComponent("Asunto: "+tipo+" | Urgencia: "+urgencia));
 }
 
 document.querySelectorAll(".faq-question").forEach(q=>{
