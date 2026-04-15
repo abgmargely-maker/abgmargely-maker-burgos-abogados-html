@@ -235,13 +235,16 @@ Iniciar consulta privada
 <!-- CHATBOT -->
 <div id="chatbot">
 <strong>Asesoría legal</strong><br><br>
-¿En qué podemos ayudarte?
+Selecciona tu asunto:
 
-<select id="tipo" style="width:100%;padding:8px;margin-top:10px;">
-<option>Divorcio</option>
-<option>Demanda</option>
-<option>Contrato</option>
-<option>Otro</option>
+<select id="tipo" style="width:100%;padding:10px;margin-top:10px;border-radius:8px;">
+<option>Divorcios</option>
+<option>Pensiones alimenticias</option>
+<option>Procedimientos familiares</option>
+<option>Procedimientos civiles y mercantiles</option>
+<option>Donaciones</option>
+<option>Compraventas</option>
+<option>Servicios notariales</option>
 </select>
 
 <br><br>
@@ -250,13 +253,15 @@ Iniciar consulta privada
 width:100%;
 background:#d96c52;
 color:white;
-padding:10px;
+padding:12px;
 border:none;
-border-radius:8px;">
-Continuar
+border-radius:8px;
+font-weight:500;
+cursor:pointer;">
+Continuar por WhatsApp
 </button>
 </div>
-
+  
 <!-- SERVICIOS -->
 <section class="section">
 <h2>Áreas de práctica</h2>
@@ -318,11 +323,15 @@ Continuar
 </footer>
 
 <script>
+<script>
 function enviar(){
-let tipo=document.getElementById("tipo").value;
-let mensaje="Hola, necesito asesoría legal sobre: "+tipo;
-window.open("https://wa.me/529996082755?text="+encodeURIComponent(mensaje));
+let tipo = document.getElementById("tipo").value;
+
+let mensaje = "Hola, solicito asesoría legal en: " + tipo + ". ¿Podrían brindarme información y costos?";
+
+window.open("https://wa.me/529996082755?text=" + encodeURIComponent(mensaje));
 }
+</script>
 
 document.querySelectorAll(".faq-question").forEach(q=>{
 q.addEventListener("click",()=>{
