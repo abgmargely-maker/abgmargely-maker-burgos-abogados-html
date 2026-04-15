@@ -9,12 +9,16 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Burgos Abogados" />
   <meta property="og:description" content="Crecemos contigo, con estrategia y respaldo legal." />
+  <link rel="icon" type="image/png" href="logo_fb_circular_2-removebg-preview.png" />
+  <link rel="apple-touch-icon" href="logo_fb_circular_2-removebg-preview.png" />
   <style>
+    html { scroll-behavior: smooth; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Georgia, 'Times New Roman', serif; background: #0f0f10; color: #f5f1e8; line-height: 1.6; }
     .hero { min-height: 100vh; background: linear-gradient(rgba(10,10,10,.75), rgba(10,10,10,.88)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover; padding: 30px 8%; }
-    nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:80px; }
-    .logo img { width: 90px; height: 90px; object-fit: contain; }
+    nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:80px; position:sticky; top:0; z-index:999; backdrop-filter: blur(10px); background: rgba(15,15,16,.72); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .logo img { width: 96px; height: 96px; object-fit: contain; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; filter: drop-shadow(0 4px 12px rgba(0,0,0,.35)); transition: transform .3s ease, filter .3s ease; }
+    .logo img:hover { transform: scale(1.08) rotate(-2deg); filter: drop-shadow(0 8px 18px rgba(199,181,138,.35)); }
     .menu { display:flex; gap:34px; flex-wrap:wrap; }
     .menu a, .whatsapp-float { text-decoration:none; }
     .menu a { color:#f5f1e8; font-size:18px; }
@@ -41,13 +45,19 @@
       .hero { padding:20px 6%; }
       .section, .footer-cta { padding:60px 6%; }
     }
+  @keyframes pulse { 0%{transform:scale(1);opacity:1;} 50%{transform:scale(1.08);opacity:.85;} 100%{transform:scale(1);opacity:1;} }
+    .hero::after { content:''; position:absolute; inset:0; background: radial-gradient(circle at 80% 20%, rgba(199,181,138,.12), transparent 35%); pointer-events:none; }
+    .hero { position:relative; overflow:hidden; }
   </style>
 </head>
 <body>
+  <div id="loader" style="position:fixed;inset:0;background:#0f0f10;display:flex;align-items:center;justify-content:center;z-index:2000;transition:opacity .5s ease;">
+    <img src="logo_fb_circular_2-removebg-preview.png" alt="Burgos Abogados" style="width:110px;height:110px;animation:pulse 1.6s infinite;" />
+  </div>
   <header class="hero">
     <nav>
       <div class="logo">
-        <img src="logo-burgos.png" alt="Burgos Abogados" />
+        <img src="logo_fb_circular_2-removebg-preview.png" alt="Logotipo Burgos Abogados" />
       </div>
       <div class="menu">
         <a href="#">Inicio</a>
@@ -122,6 +132,17 @@
       </div>
     </div>
   </section>
-  <a class="whatsapp-float" href="https://wa.me/529996082755" target="_blank">✆</a>
+  <a class="whatsapp-float" href="https://wa.me/529996082755" target="_blank" aria-label="WhatsApp" title="Escríbenos por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.95L0 24l6.31-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.43zM12.08 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.88 9.88 0 0 1-1.52-5.24c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.47-4.45 9.91-9.9 9.91zm5.44-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.43s1.05 2.82 1.2 3.02c.15.2 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+  <script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 500);
+    });
+  </script>
 </body>
 </html>
