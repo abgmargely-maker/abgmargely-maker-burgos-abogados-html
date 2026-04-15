@@ -272,14 +272,33 @@ line-height:1.6;
 <section class="section faq">
 <h2>Preguntas frecuentes</h2>
 
-<button>¿Cuánto cuesta un divorcio en Mérida?</button>
-<div>Depende del tipo de procedimiento y complejidad del caso.</div>
+<div class="faq-item">
+<button class="faq-question">¿Qué servicios legales ofrece Burgos Abogados?</button>
+<div class="faq-answer">
+<p>Ofrecemos asesoría y representación legal en diversas áreas del derecho, incluyendo derecho civil, familiar, mercantil, administrativo y servicios notariales. Nuestro enfoque es brindar soluciones estratégicas adaptadas a cada cliente.</p>
+</div>
+</div>
 
-<button>¿Cómo solicitar pensión alimenticia?</button>
-<div>Se inicia mediante demanda familiar con asesoría legal.</div>
+<div class="faq-item">
+<button class="faq-question">¿Cómo puedo programar una cita?</button>
+<div class="faq-answer">
+<p>Puedes agendar una consulta de manera rápida y sencilla a través de nuestro correo electrónico o enviándonos un mensaje directo por WhatsApp. Nuestro equipo te atenderá de forma inmediata.</p>
+</div>
+</div>
 
-<button>¿Qué hacer si me demandan?</button>
-<div>Debe atenderse de inmediato con un abogado.</div>
+<div class="faq-item">
+<button class="faq-question">¿Ofrecen planes de pago flexibles?</button>
+<div class="faq-answer">
+<p>Sí. Contamos con opciones de pago flexibles que se ajustan a tus necesidades. Aceptamos pagos con tarjetas de débito y crédito (Visa, Mastercard y American Express).</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿En cuánto tiempo se resuelve mi caso?</button>
+<div class="faq-answer">
+<p>El tiempo de resolución depende de la complejidad del asunto. Sin embargo, en Burgos Abogados trabajamos con estrategias eficientes para lograr resultados en el menor tiempo posible, manteniéndote informado en cada etapa del proceso.</p>
+</div>
+</div>
 
 </section>
 
@@ -340,6 +359,14 @@ d.style.display=d.style.display==="block"?"none":"block";
 });
 });
 </script>
-
+document.querySelectorAll(".faq-question").forEach(q=>{
+q.addEventListener("click",()=>{
+let answer=q.nextElementSibling;
+answer.style.display=
+answer.style.display==="block"?"none":"block";
+});
+});
+</script>
+  
 </body>
 </html>
