@@ -92,30 +92,7 @@
     </div>
   </section>
 
-  <section class="section" id="premium-services">
-    <p class="subtitle">Atención 24/7 para clientes premium</p>
-    <h2>Tu despacho digital disponible todo el día</h2>
-    <div class="areas">
-      <div class="area-card">
-        <h3>Agenda inmediata</h3>
-        <p>Prospectos pueden solicitar valoración legal estratégica en cualquier momento desde WhatsApp.</p>
-      </div>
-      <div class="area-card">
-        <h3>Filtro de casos</h3>
-        <p>Captación inteligente de divorcios, custodias, patrimonio y asuntos corporativos de alto valor.</p>
-      </div>
-      <div class="area-card">
-        <h3>Respuesta automatizada</h3>
-        <p>Chat de preguntas frecuentes y seguimiento inicial automatizado 24/7.</p>
-      </div>
-      <div class="area-card">
-        <h3>Confianza premium</h3>
-        <p>Experiencia tipo concierge legal que transmite exclusividad y alta especialización.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section center" id="areas">
+    <section class="section center" id="areas">
     <p class="subtitle">Nuestras áreas de práctica</p>
     <h2>Servicios legales estratégicos</h2>
     <div class="areas">
@@ -183,7 +160,15 @@
       </div>
     </div>
   </section>
-  <div class="whatsapp-tooltip">Agenda tu asesoría premium por WhatsApp</div>
+  <div id="wa-chatbox" style="position:fixed;right:20px;bottom:95px;width:320px;max-width:90vw;background:#fff;color:#111;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.25);z-index:1000;overflow:hidden;">
+    <div style="background:#25D366;color:#fff;padding:14px 16px;font-weight:bold;">Burgos Abogados · Asistente 24/7</div>
+    <div style="padding:14px;">
+      <p style="font-size:14px;margin-bottom:10px;">Hola 👋 ¿Sobre qué necesitas asesoría?</p>
+      <button onclick="window.open('https://wa.me/529996082755?text=Hola%20necesito%20asesor%C3%ADa%20sobre%20divorcio','_blank')" style="display:block;width:100%;margin:8px 0;padding:10px;border:none;border-radius:10px;background:#f4f4f4;cursor:pointer;">Divorcio y bienes</button>
+      <button onclick="window.open('https://wa.me/529996082755?text=Hola%20quiero%20asesor%C3%ADa%20de%20custodia%20y%20pensi%C3%B3n','_blank')" style="display:block;width:100%;margin:8px 0;padding:10px;border:none;border-radius:10px;background:#f4f4f4;cursor:pointer;">Custodia y pensión</button>
+      <button onclick="window.open('https://wa.me/529996082755?text=Hola%20necesito%20asesor%C3%ADa%20corporativa%20para%20mi%20empresa','_blank')" style="display:block;width:100%;margin:8px 0;padding:10px;border:none;border-radius:10px;background:#f4f4f4;cursor:pointer;">Empresas y contratos</button>
+    </div>
+  </div>
   <a class="whatsapp-float" href="https://wa.me/529996082755?text=Hola%20Burgos%20Abogados,%20quiero%20agendar%20una%20asesor%C3%ADa%20legal%20estrat%C3%A9gica." target="_blank" aria-label="WhatsApp" title="Escríbenos por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.95L0 24l6.31-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.43zM12.08 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.88 9.88 0 0 1-1.52-5.24c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.47-4.45 9.91-9.9 9.91zm5.44-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.43s1.05 2.82 1.2 3.02c.15.2 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
@@ -200,6 +185,20 @@
     // Reemplaza G-XXXXXXX con tu Google Analytics
     // window.dataLayer = window.dataLayer || [];
     // function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script>
+  <div id="lead-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;align-items:center;justify-content:center;">
+    <div style="background:#fff;color:#111;max-width:520px;width:92%;padding:30px;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.35);position:relative;">
+      <button onclick="document.getElementById('lead-popup').style.display='none'" style="position:absolute;top:12px;right:16px;border:none;background:none;font-size:24px;cursor:pointer;">×</button>
+      <h3 style="margin-bottom:12px;">Agenda tu valoración estratégica</h3>
+      <p style="margin-bottom:18px;">Cuéntanos brevemente tu asunto y recibe orientación inicial por WhatsApp.</p>
+      <a class="cta" href="https://wa.me/529996082755?text=Hola%20quiero%20agendar%20una%20valoraci%C3%B3n%20estrat%C3%A9gica" target="_blank">Iniciar por WhatsApp</a>
+    </div>
+  </div>
+  <script>
+    setTimeout(function(){
+      const popup = document.getElementById('lead-popup');
+      if (popup) popup.style.display = 'flex';
+    }, 15000);
   </script>
 </body>
 </html>
