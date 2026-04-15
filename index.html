@@ -92,6 +92,29 @@
     </div>
   </section>
 
+  <section class="section" id="premium-services">
+    <p class="subtitle">Atención 24/7 para clientes premium</p>
+    <h2>Tu despacho digital disponible todo el día</h2>
+    <div class="areas">
+      <div class="area-card">
+        <h3>Agenda inmediata</h3>
+        <p>Prospectos pueden solicitar valoración legal estratégica en cualquier momento desde WhatsApp.</p>
+      </div>
+      <div class="area-card">
+        <h3>Filtro de casos</h3>
+        <p>Captación inteligente de divorcios, custodias, patrimonio y asuntos corporativos de alto valor.</p>
+      </div>
+      <div class="area-card">
+        <h3>Respuesta automatizada</h3>
+        <p>Chat de preguntas frecuentes y seguimiento inicial automatizado 24/7.</p>
+      </div>
+      <div class="area-card">
+        <h3>Confianza premium</h3>
+        <p>Experiencia tipo concierge legal que transmite exclusividad y alta especialización.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section center" id="areas">
     <p class="subtitle">Nuestras áreas de práctica</p>
     <h2>Servicios legales estratégicos</h2>
@@ -115,6 +138,29 @@
     </div>
   </section>
 
+  <section class="section" id="precalificacion">
+    <p class="subtitle">Precalificación de casos</p>
+    <h2>Cuéntanos tu asunto y te orientamos hoy mismo</h2>
+    <div class="about-card" style="max-width:900px;margin:30px auto;">
+      <form onsubmit="window.open('https://wa.me/529996082755?text=Hola%20quiero%20precalificar%20mi%20caso%20legal','_blank'); return false;">
+        <div class="contact-grid">
+          <input type="text" placeholder="Nombre completo" style="padding:14px;border-radius:10px;border:none;" required>
+          <select style="padding:14px;border-radius:10px;border:none;">
+            <option>Tipo de asunto</option>
+            <option>Divorcio y patrimonio</option>
+            <option>Custodia y pensión</option>
+            <option>Empresas y contratos</option>
+          </select>
+        </div>
+        <textarea placeholder="Describe brevemente tu caso" style="width:100%;margin-top:16px;padding:14px;border-radius:10px;border:none;min-height:120px;"></textarea>
+        <button class="cta" type="submit">Enviar y agendar valoración</button>
+      </form>
+    </div>
+    <div class="center" style="margin-top:30px;">
+      <a class="cta" href="#" onclick="alert('Integra aquí tu enlace de Calendly o Google Calendar'); return false;">Agendar cita premium</a>
+    </div>
+  </section>
+
   <section class="footer-cta" id="contacto">
     <h2>Contacto</h2>
     <div class="contact-grid">
@@ -127,6 +173,9 @@
       <div class="chatbot-box">
         <h3>Preguntas rápidas</h3>
         <div class="chatbot-questions">
+          <button onclick="window.open('https://wa.me/529996082755?text=Hola%20quiero%20una%20asesor%C3%ADa%20sobre%20divorcio%20y%20patrimonio','_blank')">Divorcio y patrimonio</button>
+          <button onclick="window.open('https://wa.me/529996082755?text=Hola%20quiero%20asesor%C3%ADa%20de%20custodia%20y%20pensi%C3%B3n','_blank')">Custodia y pensión</button>
+          <button onclick="window.open('https://wa.me/529996082755?text=Hola%20necesito%20asesor%C3%ADa%20corporativa%20para%20mi%20empresa','_blank')">Empresas y contratos</button>
           <button onclick="alert('Sí, agenda tu consulta por WhatsApp y te orientamos.')">¿Puedo agendar una consulta?</button>
           <button onclick="alert('Atendemos asuntos familiares, corporativos, civiles y laborales.')">¿Qué asuntos atienden?</button>
           <button onclick="alert('Sí, ofrecemos atención presencial y virtual.')">¿Dan asesoría en línea?</button>
@@ -146,6 +195,11 @@
       loader.style.opacity = '0';
       setTimeout(() => loader.style.display = 'none', 500);
     });
+  </script>
+  <script>
+    // Reemplaza G-XXXXXXX con tu Google Analytics
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
   </script>
 </body>
 </html>
