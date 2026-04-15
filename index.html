@@ -35,7 +35,9 @@
     .center { text-align:center; }
     .footer-cta { padding:80px 8%; background:linear-gradient(135deg,#171717,#0d0d0e); }
     .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; }
-    .whatsapp-float { position:fixed; right:20px; bottom:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; z-index:1000; }
+    .whatsapp-float { position:fixed; right:20px; bottom:20px; background:#25D366; color:white; width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; z-index:1000; box-shadow:0 10px 25px rgba(37,211,102,.35); transition: transform .25s ease, box-shadow .25s ease; }
+    .whatsapp-float:hover { transform: scale(1.08); box-shadow:0 14px 30px rgba(37,211,102,.5); }
+    .whatsapp-tooltip { position:fixed; right:94px; bottom:34px; background:#ffffff; color:#111; padding:10px 14px; border-radius:14px; font-size:14px; box-shadow:0 8px 20px rgba(0,0,0,.18); z-index:999; }
     .chatbot-questions button { display:block; width:100%; margin:10px 0; padding:12px; border:none; border-radius:10px; background:#2a2a2d; color:#fff; text-align:left; cursor:pointer; }
     @media (max-width: 1024px) { .areas { grid-template-columns:repeat(2,1fr); } }
     @media (max-width: 768px) {
@@ -120,7 +122,7 @@
         <p><strong>Dirección:</strong> Calle 33 número 479, Polígono 108, Mérida, Yucatán</p>
         <p><strong>Email:</strong> <a href="mailto:Abg.margely@burgossc.com" style="color:#c7b58a;">Abg.margely@burgossc.com</a></p>
         <p><strong>Teléfono:</strong> <a href="tel:9996082755" style="color:#c7b58a;">999 608 2755</a></p>
-        <a class="cta" href="https://wa.me/529996082755" target="_blank">Escríbenos por WhatsApp</a>
+        <a class="cta" href="https://wa.me/529996082755?text=Hola%20Burgos%20Abogados,%20quiero%20agendar%20una%20asesor%C3%ADa%20legal%20estrat%C3%A9gica." target="_blank">Escríbenos por WhatsApp</a>
       </div>
       <div class="chatbot-box">
         <h3>Preguntas rápidas</h3>
@@ -132,7 +134,8 @@
       </div>
     </div>
   </section>
-  <a class="whatsapp-float" href="https://wa.me/529996082755" target="_blank" aria-label="WhatsApp" title="Escríbenos por WhatsApp">
+  <div class="whatsapp-tooltip">Agenda tu asesoría premium por WhatsApp</div>
+  <a class="whatsapp-float" href="https://wa.me/529996082755?text=Hola%20Burgos%20Abogados,%20quiero%20agendar%20una%20asesor%C3%ADa%20legal%20estrat%C3%A9gica." target="_blank" aria-label="WhatsApp" title="Escríbenos por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.95L0 24l6.31-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.43zM12.08 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.88 9.88 0 0 1-1.52-5.24c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.47-4.45 9.91-9.9 9.91zm5.44-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.43s1.05 2.82 1.2 3.02c.15.2 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
     </svg>
