@@ -6,43 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Burgos Abogados | Abogados en Mérida</title>
-<meta name="description" content="Abogados en Mérida. Especialistas en derecho familiar, civil, mercantil y servicios notariales. Atención inmediata por WhatsApp.">
 
-<!-- SEO Técnico -->
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.burgossc.com/">
+<meta name="description" content="Abogados en Mérida. Especialistas en derecho familiar, civil y mercantil.">
 
-<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#d96c52">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Burgos Abogados">
-<meta property="og:description" content="Despacho jurídico en Mérida. Atención inmediata.">
-<meta property="og:type" content="website">
-
-<!-- Fonts optimizadas -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* ⚡ VARIABLES */
+/* VARIABLES */
 :root{
 --coral:#d96c52;
 --bg:#f7f4ee;
 --text:#111;
---card:#ffffff;
-}
-
-/* 🌙 DARK MODE */
-@media (prefers-color-scheme: dark){
-:root{
---bg:#0e0e0e;
---text:#f5f5f5;
---card:#1a1a1a;
-}
 }
 
 /* BASE */
@@ -51,44 +29,61 @@ margin:0;
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
-scroll-behavior:smooth;
 }
 
-/* HEADER INTELIGENTE */
+/* 🔥 HEADER NEW YORK STYLE */
 header{
 position:fixed;
 top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
-padding:12px 40px;
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.8);
-transition:.4s;
+align-items:center;
+padding:18px 60px;
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+transition:.4s ease;
 z-index:100;
 }
 
+/* SCROLL EFFECT */
 header.scrolled{
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+padding:10px 60px;
+background:rgba(255,255,255,0.95);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
 }
 
 .logo img{
-height:80px;
-transform:scale(1.3);
+height:95px;
+width:auto;
+object-fit:contain;
+transition:.3s;
+}
+
+header.scrolled .logo img{
+height:75px;
 }
 
 /* BOTÓN */
 .btn{
 background:var(--coral);
 color:white;
-padding:10px 18px;
+padding:12px 22px;
 border-radius:30px;
+text-decoration:none;
+font-weight:500;
 transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* HERO */
@@ -107,73 +102,33 @@ url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover
 .hero h1{
 font-family:'Playfair Display';
 font-size:3em;
-opacity:0;
-transform:translateY(40px);
+max-width:800px;
 }
 
-/* ANIMACIÓN REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:1s ease;
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header{
+padding:12px 20px;
 }
 
-.reveal.active{
-opacity:1;
-transform:translateY(0);
+.logo img{
+height:70px;
 }
 
-/* CARDS */
-.areas{
-display:grid;
-gap:20px;
-padding:50px;
-}
-
-.card{
-background:var(--card);
-padding:25px;
-border-radius:15px;
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 20px 40px rgba(0,0,0,0.1);
-}
-
-/* FAQ */
-.faq-answer{
-display:none;
-}
-
-/* CHATBOT */
-#chatbot{
-position:fixed;
-bottom:90px;
-right:20px;
-width:300px;
-background:var(--card);
-border-radius:15px;
-box-shadow:0 20px 50px rgba(0,0,0,0.2);
-}
-
-/* FLOAT */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
+header.scrolled .logo img{
 height:60px;
-background:#25D366;
-border-radius:50%;
-animation:pulse 2s infinite;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+.btn{
+padding:10px 16px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:2em;
+}
+
 }
 
 </style>
@@ -182,94 +137,29 @@ animation:pulse 2s infinite;
 <body>
 
 <header id="header">
+
 <div class="logo">
-<img src="logo.png" loading="lazy">
+<img src="logo.png" alt="Burgos Abogados">
 </div>
-<a class="btn" href="https://wa.me/529996082755">WhatsApp</a>
+
+<a href="https://wa.me/529996082755" class="btn">
+Consulta inmediata
+</a>
+
 </header>
 
 <section class="hero">
-<h1 class="reveal">Crecemos contigo, con estrategia y respaldo legal.</h1>
+<h1>Crecemos contigo, con estrategia y respaldo legal.</h1>
 </section>
-
-<section class="areas">
-<div class="card reveal">Derecho Familiar</div>
-<div class="card reveal">Derecho Civil</div>
-<div class="card reveal">Derecho Mercantil</div>
-<div class="card reveal">Servicios Notariales</div>
-</section>
-
-<section class="areas">
-<h2 class="reveal">Preguntas frecuentes</h2>
-
-<div>
-<button onclick="toggle(this)">¿Qué servicios ofrecen?</button>
-<div class="faq-answer">Civil, familiar, mercantil y notariales.</div>
-</div>
-
-</section>
-
-<div id="chatbot">
-<div style="background:#d96c52;color:white;padding:10px;">
-Burgos Abogados
-</div>
-<div style="padding:10px;">
-<select id="tipo">
-<option>Divorcio</option>
-<option>Mercantil</option>
-</select>
-<button onclick="enviar()">Enviar</button>
-</div>
-</div>
-
-<a class="whatsapp" href="https://wa.me/529996082755"></a>
 
 <script>
 
-/* HEADER SCROLL */
+/* HEADER INTELIGENTE */
 window.addEventListener("scroll",()=>{
-document.getElementById("header").classList.toggle("scrolled",window.scrollY>50);
+let header=document.getElementById("header");
+header.classList.toggle("scrolled",window.scrollY>50);
 });
 
-/* REVEAL ANIMATION */
-const reveals=document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll",()=>{
-reveals.forEach(el=>{
-let top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add("active");
-}
-});
-});
-
-/* FAQ */
-function toggle(el){
-let next=el.nextElementSibling;
-next.style.display=next.style.display==="block"?"none":"block";
-}
-
-/* WHATSAPP */
-function enviar(){
-let tipo=document.getElementById("tipo").value;
-window.open("https://wa.me/529996082755?text="+tipo);
-}
-
-</script>
-
-<!-- 🧠 DATOS ESTRUCTURADOS SEO -->
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"LegalService",
-"name":"Burgos Abogados",
-"address":{
-"@type":"PostalAddress",
-"addressLocality":"Mérida",
-"addressCountry":"MX"
-},
-"telephone":"+529996082755"
-}
 </script>
 
 </body>
