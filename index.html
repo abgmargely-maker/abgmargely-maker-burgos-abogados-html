@@ -6,20 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Burgos Abogados | Abogados en Mérida</title>
+<meta name="description" content="Abogados en Mérida especialistas en derecho familiar, civil y mercantil.">
 
-<meta name="description" content="Abogados en Mérida especialistas en derecho familiar, civil y mercantil. Atención inmediata por WhatsApp.">
-
-<!-- SEO -->
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.burgossc.com/">
-
-<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#d96c52">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -41,19 +32,14 @@
 }
 }
 
-/* RESET */
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+/* BASE */
+*{box-sizing:border-box;margin:0;padding:0;}
 
-/* BODY */
 body{
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
-padding-top:110px; /* 🔥 evita que el header tape contenido */
+padding-top:110px;
 }
 
 /* HEADER */
@@ -77,7 +63,6 @@ height:80px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
 .logo img{
 height:85px;
 transition:.3s;
@@ -87,7 +72,6 @@ header.scrolled .logo img{
 height:70px;
 }
 
-/* BOTÓN */
 .btn{
 background:var(--coral);
 color:white;
@@ -103,8 +87,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:40px 20px;
 color:white;
+padding:40px 20px;
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover;
@@ -116,14 +100,14 @@ font-size:3em;
 max-width:800px;
 }
 
-/* SECCIONES */
+/* SECTIONS */
 .section{
 padding:80px 20px;
 max-width:1100px;
 margin:auto;
 }
 
-/* AREAS */
+/* CARDS */
 .areas{
 display:grid;
 gap:20px;
@@ -142,58 +126,86 @@ transform:translateY(-5px);
 }
 
 /* FAQ */
-.faq-item{
-margin-bottom:10px;
-}
+.faq-answer{display:none;}
 
-.faq-question{
-width:100%;
-padding:15px;
-background:var(--card);
-border:none;
-cursor:pointer;
-text-align:left;
-}
-
-.faq-answer{
-display:none;
-padding:15px;
-}
-
-/* MAP */
-iframe{
-width:100%;
-height:300px;
-border:none;
-border-radius:10px;
-}
-
-/* WHATS FLOAT */
-.whatsapp{
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
 position:fixed;
 bottom:20px;
 right:20px;
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 background:#25D366;
 border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+color:white;
+cursor:pointer;
+animation:pulse 2s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* CHATBOT */
+#chatbot{
+position:fixed;
+bottom:100px;
+right:20px;
+width:300px;
+background:var(--card);
+border-radius:15px;
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+transform:translateY(20px) scale(0.9);
+opacity:0;
+transition:.3s;
+z-index:999;
+}
+
+#chatbot.active{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+
+.chat-header{
+background:var(--coral);
+color:white;
+padding:12px;
+display:flex;
+justify-content:space-between;
+}
+
+.chat-body{
+padding:15px;
+}
+
+select{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+.btn-whatsapp{
+width:100%;
+margin-top:12px;
+background:#25D366;
+color:white;
+padding:12px;
+border:none;
+border-radius:10px;
+cursor:pointer;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
-
-header{
-padding:0 20px;
-}
-
-.logo img{
-height:65px;
-}
-
-.hero h1{
-font-size:2em;
-}
-
+.logo img{height:65px;}
+.hero h1{font-size:2em;}
 }
 
 </style>
@@ -203,9 +215,9 @@ font-size:2em;
 
 <header id="header">
 <div class="logo">
-<img src="logo.png" alt="Burgos Abogados">
+<img src="logo.png">
 </div>
-<a href="https://wa.me/529996082755" class="btn">WhatsApp</a>
+<a href="https://wa.me/529996082755" class="btn">Consulta inmediata</a>
 </header>
 
 <section class="hero">
@@ -225,39 +237,129 @@ font-size:2em;
 <section class="section">
 <h2>Preguntas frecuentes</h2>
 
-<div class="faq-item">
-<button class="faq-question">¿Qué servicios ofrecen?</button>
+<button onclick="toggleFAQ(this)">¿Qué servicios ofrecen?</button>
 <div class="faq-answer">Civil, familiar, mercantil y notariales.</div>
-</div>
 
-<div class="faq-item">
-<button class="faq-question">¿Cómo agendo?</button>
+<button onclick="toggleFAQ(this)">¿Cómo agendo?</button>
 <div class="faq-answer">Por WhatsApp o correo.</div>
+
+</section>
+
+<!-- BOTÓN -->
+<div class="whatsapp-btn" onclick="toggleChat()">💬</div>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+<div class="chat-header">
+Burgos Abogados
+<span onclick="toggleChat()">✕</span>
 </div>
 
-</section>
+<div class="chat-body">
 
-<section class="section">
-<h2>Ubicación</h2>
-<iframe src="https://maps.google.com/maps?q=merida&z=15&output=embed"></iframe>
-</section>
+<p id="mensaje">¿En qué podemos ayudarte?</p>
 
-<a class="whatsapp" href="https://wa.me/529996082755"></a>
+<select id="tipo">
+<option>Divorcios</option>
+<option>Pensiones alimenticias</option>
+<option>Procedimientos familiares</option>
+<option>Procedimientos civiles y mercantiles</option>
+<option>Donaciones</option>
+<option>Compraventas</option>
+<option>Servicios notariales</option>
+</select>
+
+<select id="urgencia">
+<option>Urgente</option>
+<option>Media</option>
+<option>Baja</option>
+</select>
+
+<button onclick="enviar()" class="btn-whatsapp">
+Enviar por WhatsApp
+</button>
+
+</div>
+</div>
 
 <script>
 
-/* HEADER SCROLL */
+/* HEADER */
 window.addEventListener("scroll",()=>{
 document.getElementById("header").classList.toggle("scrolled",window.scrollY>50);
 });
 
 /* FAQ */
-document.querySelectorAll(".faq-question").forEach(q=>{
-q.addEventListener("click",()=>{
-let a=q.nextElementSibling;
-a.style.display=a.style.display==="block"?"none":"block";
+function toggleFAQ(el){
+let next=el.nextElementSibling;
+next.style.display=next.style.display==="block"?"none":"block";
+}
+
+/* CHATBOT INTELIGENTE */
+let chat=document.getElementById("chatbot");
+let mensaje=document.getElementById("mensaje");
+let autoClose;
+
+/* abrir */
+function abrir(){
+chat.classList.add("active");
+startAutoClose();
+}
+
+/* cerrar */
+function toggleChat(){
+chat.classList.toggle("active");
+startAutoClose();
+}
+
+/* auto cierre */
+function startAutoClose(){
+clearTimeout(autoClose);
+autoClose=setTimeout(()=>{
+chat.classList.remove("active");
+},12000);
+}
+
+/* tiempo */
+setTimeout(()=>{
+mensaje.innerText="¿Necesitas ayuda legal? Podemos orientarte ahora.";
+abrir();
+},4000);
+
+/* scroll */
+window.addEventListener("scroll",()=>{
+if(window.scrollY>300){
+mensaje.innerText="Veo que estás revisando información. ¿Te ayudamos?";
+abrir();
+}
 });
+
+/* salida */
+document.addEventListener("mouseleave",()=>{
+mensaje.innerText="Antes de irte, podemos ayudarte con tu caso.";
+abrir();
 });
+
+/* inactividad */
+let tiempo;
+document.addEventListener("mousemove",resetInactividad);
+function resetInactividad(){
+clearTimeout(tiempo);
+tiempo=setTimeout(()=>{
+mensaje.innerText="¿Sigues ahí? Podemos ayudarte.";
+abrir();
+},15000);
+}
+
+/* whatsapp */
+function enviar(){
+let tipo=document.getElementById("tipo").value;
+let urgencia=document.getElementById("urgencia").value;
+
+window.open("https://wa.me/529996082755?text="+encodeURIComponent(
+"Hola, necesito asesoría en: "+tipo+" | Urgencia: "+urgencia
+));
+}
 
 </script>
 
