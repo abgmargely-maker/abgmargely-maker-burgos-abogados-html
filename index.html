@@ -7,11 +7,19 @@
 
 <title>Burgos Abogados | Abogados en Mérida</title>
 
-<meta name="description" content="Abogados en Mérida. Especialistas en derecho familiar, civil y mercantil.">
+<meta name="description" content="Abogados en Mérida especialistas en derecho familiar, civil y mercantil. Atención inmediata por WhatsApp.">
 
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.burgossc.com/">
+
+<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#d96c52">
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -21,78 +29,81 @@
 --coral:#d96c52;
 --bg:#f7f4ee;
 --text:#111;
+--card:#fff;
 }
 
-/* BASE */
-body{
+/* DARK MODE */
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#0e0e0e;
+--text:#f5f5f5;
+--card:#1a1a1a;
+}
+}
+
+/* RESET */
+*{
+box-sizing:border-box;
 margin:0;
+padding:0;
+}
+
+/* BODY */
+body{
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
+padding-top:110px; /* 🔥 evita que el header tape contenido */
 }
 
-/* 🔥 HEADER NEW YORK STYLE */
+/* HEADER */
 header{
 position:fixed;
 top:0;
 width:100%;
+height:100px;
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:18px 60px;
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(12px);
-transition:.4s ease;
+justify-content:space-between;
+padding:0 40px;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
 z-index:100;
+transition:.3s;
 }
 
-/* SCROLL EFFECT */
 header.scrolled{
-padding:10px 60px;
-background:rgba(255,255,255,0.95);
+height:80px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* LOGO */
-.logo{
-display:flex;
-align-items:center;
-}
-
 .logo img{
-height:95px;
-width:auto;
-object-fit:contain;
+height:85px;
 transition:.3s;
 }
 
 header.scrolled .logo img{
-height:75px;
+height:70px;
 }
 
 /* BOTÓN */
 .btn{
 background:var(--coral);
 color:white;
-padding:12px 22px;
+padding:10px 20px;
 border-radius:30px;
 text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:40px 20px;
 color:white;
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
@@ -105,24 +116,78 @@ font-size:3em;
 max-width:800px;
 }
 
+/* SECCIONES */
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* AREAS */
+.areas{
+display:grid;
+gap:20px;
+}
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FAQ */
+.faq-item{
+margin-bottom:10px;
+}
+
+.faq-question{
+width:100%;
+padding:15px;
+background:var(--card);
+border:none;
+cursor:pointer;
+text-align:left;
+}
+
+.faq-answer{
+display:none;
+padding:15px;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+/* WHATS FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+}
+
 /* RESPONSIVE */
 @media(max-width:768px){
 
 header{
-padding:12px 20px;
+padding:0 20px;
 }
 
 .logo img{
-height:70px;
-}
-
-header.scrolled .logo img{
-height:60px;
-}
-
-.btn{
-padding:10px 16px;
-font-size:14px;
+height:65px;
 }
 
 .hero h1{
@@ -137,27 +202,61 @@ font-size:2em;
 <body>
 
 <header id="header">
-
 <div class="logo">
 <img src="logo.png" alt="Burgos Abogados">
 </div>
-
-<a href="https://wa.me/529996082755" class="btn">
-Consulta inmediata
-</a>
-
+<a href="https://wa.me/529996082755" class="btn">WhatsApp</a>
 </header>
 
 <section class="hero">
 <h1>Crecemos contigo, con estrategia y respaldo legal.</h1>
 </section>
 
+<section class="section">
+<h2>Áreas de práctica</h2>
+<div class="areas">
+<div class="card">Derecho Familiar</div>
+<div class="card">Derecho Civil</div>
+<div class="card">Derecho Mercantil</div>
+<div class="card">Servicios Notariales</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Preguntas frecuentes</h2>
+
+<div class="faq-item">
+<button class="faq-question">¿Qué servicios ofrecen?</button>
+<div class="faq-answer">Civil, familiar, mercantil y notariales.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">¿Cómo agendo?</button>
+<div class="faq-answer">Por WhatsApp o correo.</div>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Ubicación</h2>
+<iframe src="https://maps.google.com/maps?q=merida&z=15&output=embed"></iframe>
+</section>
+
+<a class="whatsapp" href="https://wa.me/529996082755"></a>
+
 <script>
 
-/* HEADER INTELIGENTE */
+/* HEADER SCROLL */
 window.addEventListener("scroll",()=>{
-let header=document.getElementById("header");
-header.classList.toggle("scrolled",window.scrollY>50);
+document.getElementById("header").classList.toggle("scrolled",window.scrollY>50);
+});
+
+/* FAQ */
+document.querySelectorAll(".faq-question").forEach(q=>{
+q.addEventListener("click",()=>{
+let a=q.nextElementSibling;
+a.style.display=a.style.display==="block"?"none":"block";
+});
 });
 
 </script>
